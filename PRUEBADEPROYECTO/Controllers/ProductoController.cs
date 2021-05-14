@@ -8,6 +8,7 @@ using PRUEBADEPROYECTO.Data;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace PRUEBADEPROYECTO.Controllers
 {
     public class ProductoController : Controller
@@ -46,7 +47,27 @@ namespace PRUEBADEPROYECTO.Controllers
             }
             return View(producto);
         }
+
+        public IActionResult Eliminar(int id)
+        {
+            var producto = _db.Productos.Find(id);
+            return View(producto);
+        }
+
+
+        [HttpPost]
+
+        public IActionResult Eliminar(Producto producto)
+        {
+            _db.Productos.Remove(producto);
+            _db.Entry(producto).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
-      
-    }
+
+
+}
 
