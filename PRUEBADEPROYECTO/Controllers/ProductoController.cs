@@ -22,7 +22,8 @@ namespace PRUEBADEPROYECTO.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var Productos = _db.Productos;
+            return View(Productos);
         }
 
         [Authorize(Roles = "Admin")]
