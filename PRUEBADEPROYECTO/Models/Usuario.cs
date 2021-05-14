@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PRUEBADEPROYECTO.Models
 {
-    [Table("Usuario")]
+    [Table("Usuarios")]
     public class Usuario
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

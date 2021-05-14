@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace PRUEBADEPROYECTO.Models
 {
-    [Table("Tarjeta")]
+    [Table("Tarjetas")]
     public class Tarjeta
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
         [Required, Display(Name = "Número de tarjeta")]
         public string NumTarjeta { get; set; }
     }
