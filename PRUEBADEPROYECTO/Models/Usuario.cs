@@ -22,6 +22,7 @@ namespace PRUEBADEPROYECTO.Models
 
         [Display(Name = "Código postal")]
         public string CodigoPostal { get; set; }
+        public TipoUsuario Tipo { get; set; }
 
 
     }
