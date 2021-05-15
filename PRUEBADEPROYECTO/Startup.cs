@@ -66,6 +66,7 @@ namespace PRUEBADEPROYECTO
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            
             CreateRoles(services).Wait();
         }
 

@@ -56,10 +56,11 @@ namespace PRUEBADEPROYECTO.Controllers
 
 
         [HttpPost]
+       
 
         public IActionResult Eliminar(Producto producto)
         {
-            _db.Productos.Remove(producto);
+           
             _db.Entry(producto).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
             _db.SaveChanges();
 
