@@ -15,7 +15,7 @@ namespace PRUEBADEPROYECTO.Data
             public DbSet<Producto> Productos { get; set; }
         public DbSet<Direcciones> Direction { get; set; }
         public DbSet<Tarjeta> Tarjetas { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+       
     
     }
 }
