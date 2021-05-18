@@ -26,9 +26,9 @@ namespace PRUEBADEPROYECTO.Controllers
         }
 
         [HttpPost]
-        public IActionResult CrearRole(string Nombre)
+        public async Task<IActionResult> CrearRole(string Nombre)
         {
-            _roleManager.CreateAsync(new IdentityRole(Nombre));
+           await _roleManager.CreateAsync(new IdentityRole(Nombre));
             return View();
         }
 
